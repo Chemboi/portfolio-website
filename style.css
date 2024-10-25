@@ -1,0 +1,289 @@
+
+/* ***** General Styles ***** */
+
+body {
+    font-size: 18px;  /* Increase this to adjust all text */
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.8; /* Keep line height comfortable */
+    margin: 0;
+    padding: 0;
+    background-image: url('images/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333;
+}
+
+
+
+
+/* ***** Header ***** */
+
+header {
+    display: flex;
+    flex-direction: column; /* Stack the title and navigation vertically */
+    align-items: center;   
+    background: linear-gradient(135deg, #333, #555); 
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem; /* Larger size for header */
+    text-align: center; /* Ensure the text is center-aligned */
+}
+
+/* Navigation Styling */
+nav {
+    text-align: center; /* Center-align the navigation links */
+    margin-top: 15px;   /* Add space between the title and nav links */
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+/* ***** Main ***** */
+
+main {
+    max-width: 960px;  /* Set a consistent max-width for the entire content */
+    margin: 0 auto;     
+    padding: 40px 20px; 
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 40px;
+    background-color: #f0f0f0eb; /* Light grey background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 960px; /* Set max-width for section */
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden; /* Prevent content from overflowing */
+}
+
+h1 {
+    font-size: 2.5rem; /* Larger size for main titles (I prefer to use rem for title) */
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+h2 {
+    font-size: 2rem; /* Medium size for section titles */
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+h3 {
+    font-size: 1.5rem; /* Small size for subtitles */
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+/* Text Alignment */
+p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    text-align: justify;
+    padding-left: 10px;  /* Align paragraphs with the headings */
+    padding-right: 10px;
+}
+
+
+
+/* ***** About Me ****** */
+.about-container {
+    display: flex; /* Align text and images side by side */
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.about-text {
+    max-width: 960px; 
+    margin: 0 auto; /
+    text-align: justify; 
+    padding: 20px; 
+}
+
+.about-images {
+    display: flex;
+    justify-content: center; /* Center the images */
+    gap: 20px; /* Add spacing between the images */
+    margin-top: 20px;
+}
+
+.about-img {
+    width: 280px; /* Set consistent width for images */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+
+
+/* ***** Project and Blog Items ***** */
+.project-item, .blog-item {
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: left;
+}
+
+.project-item h3, .blog-item h3 {
+    margin-top: 0;
+    padding-left: 10px;   /* Add padding to align with headings */
+}
+
+/* Bayesian Image  */
+.bayesian-img {
+    display: block;
+    margin: 20px auto; 
+    max-width: 100%; /* Ensure the image doesn't exceed 100% of the container */
+    width: 900px; /
+    height: auto; 
+}
+
+/* Wine Image  */
+.wine-img {
+    display: block;
+    margin: 20px auto; 
+    max-width: 100%; 
+    width: 500px; /
+    height: auto; 
+}
+
+/* Add box-sizing to ensure predictable widths */
+* {
+    box-sizing: border-box;
+}
+
+
+
+
+/* **** Contact ***** */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Spacing between form element */
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9; /* soft background for a clean look */
+    border-radius: 8px; /* soft rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-sizing: border-box;
+}
+
+/* Form labels */
+.contact-form label {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Input fields and textarea */
+.contact-form input,
+.contact-form textarea {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    width: 100%; /* Ensure the input/textarea spans full width */
+    max-width: 100%; /* Prevent the elements from overflowing when stretching*/
+    box-sizing: border-box; /* Include padding and borders in width */
+}
+
+/* Button styling */
+.contact-form button {
+    background-color: #b11226;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    max-width: 100%; /* Ensure the button doesn't overflow */
+}
+
+.contact-form button:hover {
+    background-color: #90081a;
+}
+
+/* Textarea */
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px; /* Min height for the textarea */
+    max-width: 100%; /* Prevent the textarea from overflowing */
+}
+
+
+
+/* ***** Footer ***** */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    position: relative;
+}
+
+/* "Go to Top" Link Styling */
+footer a {
+    color: #fff; 
+    font-weight: bold; 
+    text-decoration: none; 
+    display: inline-block; /* Ensure the link behaves like a block-level element for centering */
+    text-align: center; /* Center the text inside the link */
+    margin: 0 auto; /* Center the link itself */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+
+
+
+
+/* Responsive adjustments for the screen */
+@media screen and (max-width: 768px) {
+    main {
+        padding: 20px 10px; /* Reduce padding for smaller screens */
+    }
+
+    .about-images {
+        flex-direction: column; /* Stack images on smaller screens */
+    }
+
+    .about-img {
+        width: 100%; /* Full width images on small screens */
+    }
+}
