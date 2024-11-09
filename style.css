@@ -1,178 +1,424 @@
-
 /* ***** General Styles ***** */
+/* include : over style and body, header & nav, audio, main, section and footer */
 
-body {
-    font-size: 18px;  /* Increase this to adjust all text */
-    font-family: 'Roboto', Arial, sans-serif;
-    line-height: 1.8; /* Keep line height comfortable */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+.main-content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+body, html { /* I put (html) for full page layout and consistent background with the image. */
+    font-size: 16px;
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    color: #333;
     background-image: url('images/background.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: #333;
 }
-
-
-
-
-/* ***** Header ***** */
 
 header {
-    display: flex;
-    flex-direction: column; /* Stack the title and navigation vertically */
-    align-items: center;   
-    background: linear-gradient(135deg, #333, #555); 
+    background: linear-gradient(135deg, #333, #555);
     color: #fff;
-    padding: 20px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-}
-
-/* Add max-width constraint for large screens */
-.about-container {
-    max-width: 1200px;  /* Keep header and about section contained */
-    margin: 0 auto;  /* Center the content */
+    padding: 10px 20px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.5rem; /* Larger size for header */
-    text-align: center; /* Ensure the text is center-aligned */
+    font-size: 2.5rem;
+    margin-bottom: 5px;
 }
 
-
-
-/* Navigation Styling */
 nav {
-    display: flex;  /* Flexbox */
-    justify-content: center;  
+    display: flex;
+    justify-content: center;
     gap: 20px;
-    margin-top: 15px;
+    font-size: 1.3rem;
 }
 
 nav a {
     color: #fff;
-    margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
 }
 
 nav a:hover {
     text-decoration: underline;
-    color: #b11226; /* Add a hover color effect */
-    transition: color 0.3s ease; /* Smooth color transition */
+    color: #b11226;
+    transition: color 0.3s ease;
 }
 
-/* Image Hover Effect */
-.about-img:hover {
-    transform: scale(1.05);  /* Slight zoom-in effect on image */
-    transition: transform 0.3s ease;  /* Smooth zoom transition */
+#background-music {
+    margin-top: 5px;
+    display: inline-flex; /* text and audio are on same line */
+    align-items: center; 
+    gap: 0px; /* Space between the text and audio player */
 }
 
-/* Project Links Hover Effect */
-.project-item a:hover, .blog-item a:hover {
-    color: #b11226;  /* Change color on hover */
-    text-decoration: underline;
-    transition: color 0.3s ease;  /* Smooth color transition */
+#background-music p {
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
+    margin: 0; 
 }
 
-
-
-
-
-/* ***** Main ***** */
+#background-music audio { /* Remove default margins/paddings and i chaned the default"s size player*/
+    margin: 0; 
+    padding: 0;
+    max-width: 250px;
+    height: 30px;
+}
 
 main {
-    max-width: 1200px;  /* Set a consistent max-width for the entire content */
-    margin: 0 auto;     
-    padding: 40px 20px; 
+    flex: 1;
+    max-width: none;
+    margin: 0 auto;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
-/* Section Styling */
-section {
-    margin-bottom: 40px;
-    background-color: #f0f0f0eb; /* Light grey background */
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    max-width: 960px; /* Set max-width for section */
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden; /* Prevent content from overflowing */
+h1, h2, h3, h4 {
+    font-family: 'Roboto', Arial, sans-serif;
 }
 
 h1 {
-    font-size: 2.5rem; /* Larger size for main titles (I prefer to use rem for title) */
-    margin-top: 0;
-    margin-bottom: 20px;
-    text-align: left;
-    padding-left: 10px;
+    font-size: 2.5rem;
+    margin: 0 0 20px;
 }
 
 h2 {
-    font-size: 2rem; /* Medium size for section titles */
-    margin-top: 0;
-    margin-bottom: 15px;
-    text-align: left;
-    padding-left: 10px;
+    font-size: 2rem;
+    margin: 0 0 15px;
 }
 
 h3 {
-    font-size: 1.5rem; /* Small size for subtitles */
-    margin-top: 0;
-    margin-bottom: 10px;
-    text-align: left;
-    padding-left: 10px;
+    font-size: 1.5rem;
+    margin: 0 0 10px;
 }
 
-/* Text Alignment */
+h4 {
+    font-size: 1rem;
+    margin: 0 0 5px;
+}
+
 p {
-    margin-top: 0;
-    margin-bottom: 20px;
-    line-height: 1.8;
+    margin: 0 0 20px;
     text-align: justify;
-    padding-left: 10px;  /* Align paragraphs with the headings */
-    padding-right: 10px;
+    padding: 0 10px;
+}
+
+section {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    background-color: #f8f8f8;
+    padding: 25px; 
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); 
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto;
+}
+
+footer a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #b11226;
+    transition: color 0.3s ease;
+}
+
+
+/* The next segment is the specific layout for each page. */
+
+
+/* ***** HOME ***** */
+.home-page-main .grid-container {
+    display: grid;
+    grid-template-columns: 450px 750px 400px; /* Ratio of column width in px and not fr */
+    gap: 20px;
+    padding: 50px;
+    width: 100%;
+    max-width: 1800px; /* in (px) instead of (%), not really scalable and depend on user's screen */
+    margin: 0 auto;
+}
+
+.grid-container > * {
+    background-color: rgba(240, 240, 240, 0.95);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-self: flex-start; /* I want their respective height to match their content */
+}
+
+/* Left Section */
+.left-section h3, .left-section h4 {
+    margin-bottom: 10px;
+}
+
+.left-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.left-section li {
+    margin-bottom: 10px;
+}
+
+.left-section a {
+    color: #333;
+    text-decoration: none;
+}
+
+.left-section a:hover {
+    text-decoration: underline;
+}
+
+/* Center Section */
+.center-section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.center-section h3 {
+    font-size: 1rem;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.center-section h4 {
+    font-size: 1rem;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.center-section p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Right Section */
+.right-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-aligns all content */
+    text-align: center;
+}
+
+.right-section h3 {
+    margin-bottom: 5px;
+}
+
+.right-section p {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center; 
+    gap: 15px; 
+}
+
+.social-links img {
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+}
+
+.cat-image-container {
+    margin-top: 10px; 
+}
+
+.cat-photo {
+    width: 95%;
+    max-width: 375px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .home-page-main .grid-container {
+        grid-template-columns: 1fr; /* Single-column layout on phone */
+    }
+
+    header .header-content h1 {
+        font-size: 2.5rem;
+    }
+
+    header nav a {
+        margin: 0 10px;
+    }
+
+    /* Make center-section (text) appear first */
+    .center-section {
+        order: 1;
+    }
+    
+    .left-section {
+        order: 2;
+    }
+
+    .right-section {
+        order: 3;
+    }
+    
 }
 
 
 
 
-/* ***** About Me ****** */
-.about-container {
-    display: flex; /* Align text and images side by side */
-    flex-direction: column; 
-    align-items: center; 
+
+
+/* ABOUT ME */
+.about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
 }
 
 .about-text {
-    max-width: 960px; 
-    margin: 0 auto; /
-    text-align: justify; 
-    padding: 20px; 
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    background-color: rgba(240, 240, 240, 0.95);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 850px; /* Manually fixed to match the height of the stacked picture */
+    text-align: justify;
 }
 
-.about-images {
+.about-photo {
+    background-color: rgba(240, 240, 240, 0.95);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: center; /* Center the images */
-    gap: 20px; /* Add spacing between the images */
-    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
-.about-img {
-    width: 280px; /* Set consistent width for images */
+.about-photo img {
+    width: 100%;
     height: auto;
-    border-radius: 10px;
-    object-fit: cover;
+    border-radius: 8px;
+}
+
+.about-photo1 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.about-photo2 {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.about-photo3 {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+}
+
+/* Responsive layout for small screens */
+@media screen and (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr; /* Switch to a single-column layout */
+        grid-template-rows: auto auto auto auto;
+    }
+
+    .about-text {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        max-height: none; /* Remove height constraint on small screens */
+    }
+
+    .about-photo1, .about-photo2, .about-photo3 {
+        grid-column: 1 / 2; /* All photos in a single column */
+        grid-row: auto; /* Let them flow naturally in order */
+    }
 }
 
 
 
 
-/* ***** Project and Blog Items ***** */
-.project-item, .blog-item {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ***** PROJECTS ***** */
+.project-item {
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
@@ -181,7 +427,41 @@ p {
     text-align: left;
 }
 
-.project-item h3, .blog-item h3 {
+.project-item h3 {
+    margin-top: 0;
+    padding-left: 10px;   /* Add padding to align with headings */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ***** BLOG ***** */
+.blog-item {
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: left;
+}
+
+.blog-item h3 {
     margin-top: 0;
     padding-left: 10px;   /* Add padding to align with headings */
 }
@@ -191,7 +471,7 @@ p {
     display: block;
     margin: 20px auto; 
     max-width: 100%; /* Ensure the image doesn't exceed 100% of the container */
-    width: 900px; /
+    width: 900px;
     height: auto; 
 }
 
@@ -200,52 +480,60 @@ p {
     display: block;
     margin: 20px auto; 
     max-width: 100%; 
-    width: 500px; /
+    width: 500px;
     height: auto; 
 }
 
-/* Add box-sizing to ensure predictable widths */
-* {
-    box-sizing: border-box;
-}
 
 
 
 
-/* **** Contact ***** */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ***** CONTACT ***** */
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Spacing between form element */
+    gap: 15px;
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #f9f9f9; /* soft background for a clean look */
-    border-radius: 8px; /* soft rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    box-sizing: border-box;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Form labels */
 .contact-form label {
     font-size: 1rem;
     color: #333;
+    font-weight: bold;
 }
 
-/* Input fields and textarea */
-.contact-form input,
-.contact-form textarea {
-    padding: 8px;
+.contact-form input, .contact-form textarea {
+    padding: 10px;
     border-radius: 4px;
     border: 1px solid #ccc;
     font-size: 1rem;
-    width: 100%; /* Ensure the input/textarea spans full width */
-    max-width: 100%; /* Prevent the elements from overflowing when stretching*/
-    box-sizing: border-box; /* Include padding and borders in width */
 }
 
-/* Button styling */
 .contact-form button {
     background-color: #b11226;
     color: white;
@@ -254,89 +542,10 @@ p {
     border-radius: 4px;
     cursor: pointer;
     font-size: 1rem;
-    max-width: 100%; /* Ensure the button doesn't overflow */
+    transition: background-color 0.3s ease;
 }
 
 .contact-form button:hover {
     background-color: #90081a;
 }
 
-/* Textarea */
-.contact-form textarea {
-    resize: vertical;
-    min-height: 120px; /* Min height for the textarea */
-    max-width: 100%; /* Prevent the textarea from overflowing */
-}
-
-
-
-/* ***** Footer ***** */
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    width: 100%;
-    position: relative;
-}
-
-/* "Go to Top" Link Styling */
-footer a {
-    color: #fff; 
-    font-weight: bold; 
-    text-decoration: none; 
-    display: inline-block; /* Ensure the link behaves like a block-level element for centering */
-    text-align: center; /* Center the text inside the link */
-    margin: 0 auto; /* Center the link itself */
-}
-
-footer a:hover {
-    text-decoration: underline; /* Underline on hover */
-}
-
-
-
-
-
-/* Responsive adjustments for the screen */
-@media screen and (max-width: 768px) {
-    main {
-        padding: 20px 10px;  /* Reduce padding for smaller screens */
-    }
-
-    /* About Me Section */
-    .about-container {
-        flex-direction: column;  /* Stack text and images vertically */
-        align-items: center;  /* Center content */
-    }
-
-    .about-text {
-        width: 90%;  /* Make the text take up more width on small screens */
-    }
-
-    .about-images {
-        flex-direction: column;  /* Stack images vertically on small screens */
-        justify-content: center;
-        align-items: center;  /* Center the images */
-        gap: 10px;
-        margin-top: 10px;  /* Add some space above images */
-    }
-
-    .about-img {
-        width: 80%;  /* Adjust image width for smaller screens */
-        max-width: 200px;  /* Set a max width to prevent oversized images */
-        margin-bottom: 10px;  /* Add spacing between stacked images */
-    }
-
-    /* Navigation - Stack links vertically on mobile */
-    nav {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    /* Section Padding */
-    section {
-        padding: 15px;  /* Reduce padding for sections on mobile */
-    }
-}
