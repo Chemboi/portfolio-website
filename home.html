@@ -3,17 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Personal portfolio website showcasing projects, blogs, and contact information.">
     <title>My Personal Portfolio</title>
-    <link rel="icon" type="image/png" href="images/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="home-page">
+<body>
     <div class="main-content-wrapper">
+        <!-- Header Section -->
         <header>
             <div class="header-content">
                 <h1>Welcome to My Portfolio!</h1>
@@ -34,19 +33,19 @@
             </div>
         </header>
 
-        <main class="home-page-main">
-            <!-- Main Grid Container -->
-
+        <!-- Main Content Grid -->
+        <main>
             <div class="grid-container">
+                
                 <!-- Left Section: Coding Video Links -->
-                <aside class="left-section">
-                    <h3>Learn to Code Your First Website</h3>
+                <aside class="grid-item left-section">
+                    <h3>Learn to Code Your First Website</h3><br>
 
                     <h4>Setup Visual Studio Code (IDE)</h4>
                     <ul class="video-links">
                         <li><a href="https://www.youtube.com/watch?v=cu_ykIfBprI" target="_blank" rel="noopener">How to Install Visual Studio Code on Windows 11</a></li>
                         <li><a href="https://www.youtube.com/watch?v=mL1IcxIUd5Y" target="_blank" rel="noopener">How to Set Up VScode for Web Development</a></li>
-                    </ul>
+                    </ul><br>
 
                     <h4>Beginner Tutorials for HTML, CSS, and JavaScript</h4>
                     <ul class="video-links">
@@ -54,7 +53,7 @@
                         <li><a href="https://www.youtube.com/watch?v=lfmg-EJ8gm4&t=31651s" target="_blank" rel="noopener">JavaScript Full Course for Free</a></li>
                         <li><a href="https://www.youtube.com/watch?v=G3e-cpL7ofc" target="_blank" rel="noopener">HTML & CSS Full Course - Beginner to Pro</a></li>
                         <li><a href="https://www.youtube.com/watch?v=krfUjg0S2uI" target="_blank" rel="noopener">Build a Simple Website with HTML, CSS, JavaScript</a></li>
-                    </ul>
+                    </ul><br>
 
                     <h4>Master Git/GitHub</h4>
                     <ul class="video-links">
@@ -65,24 +64,19 @@
                 </aside>
 
                 <!-- Center Section: Main Welcome Message -->
-                <div class="center-section">
+                <section class="grid-item center-section">
                     <h2>Welcome! I'm excited to have you here.</h2>
-                    <h3>Here, I share my journey in web development, from beginner projects to blog posts on tech, science, and creativity. Dive in to explore my work, read insights from the world of coding, and connect if something sparks your interest!</h3><br>
-                
+                    <h3>Here, I share my journey in web development, from beginner projects to blog posts on tech, science, and creativity. Dive in to explore my work, read insights from the world of coding, and connect if something sparks your interest!</h3>
                     <p>Starting your coding journey can feel both exhilarating and challenging. Staying focused on your goals will help you push through those initial hurdles. Web development, using tools like <strong>HTML, CSS,</strong> and <strong>JavaScript</strong>, offers a creative and accessible way to build projects that bring your ideas to life.</p>
-                
                     <p>Building your first website is a rewarding milestone. To help you embark on this journey, I've gathered resources that were invaluable to me when I began this journey. The web is full of amazing tutorials and beginner-friendly content to guide you. Be sure to explore the video links I’ve shared to the left for a great starting point.</p>
-                
                     <p>Before you dive in, it's important to choose an <strong>IDE (Integrated Development Environment)</strong>. Think of it as a robust code editor equipped with tools to enhance your coding experience, from error checking to easy debugging. While there are several options out there (e.g., <em>IntelliJ IDEA, Eclipse, PyCharm</em>), I personally recommend <strong>Visual Studio Code (VSCode)</strong> for its flexibility and rich ecosystem of extensions.</p>
-                
                     <p>Mastering <strong>Git</strong> and <strong>GitHub</strong> is essential for any developer. Version control helps you manage your code efficiently, track changes, and collaborate seamlessly with others. Plus, GitHub serves as an excellent portfolio platform to showcase your work to potential employers or clients. Check out my recommended tutorials to start leveraging these powerful tools.</p>
-                </div>
+                </section>
 
                 <!-- Right Section: Social Media Links -->
-                <aside class="right-section">
+                <aside class="grid-item right-section">
                     <h3>Social Media</h3>
-                    
-                    <p>Let's connect with me on LinkedIn and X!<br></p>
+                    <p>Let's connect on LinkedIn and X!</p>
                     <div class="social-links">
                         <a href="https://www.linkedin.com/in/jonathan-gauvin-audet-5a8067139" target="_blank" rel="noopener">
                             <img src="images/LI-In-Bug.png" alt="LinkedIn">
@@ -91,27 +85,26 @@
                             <img src="images/logo-black.png" alt="X">
                         </a>
                     </div>
-                
                     <p>I may not be an avid Instagram user, but if you're a cat lover, you can go subscribe to my cat's account and enjoy this cat model!</p>
-                
                     <div class="social-links">
                         <a href="https://www.instagram.com/norbi_thecat/" target="_blank" rel="noopener">
                             <img src="images/insta.png" alt="Instagram">
                         </a>
                     </div>
-
                     <div class="cat-image-container">
                         <img src="images/norbert.png" alt="My Cat" class="cat-photo">
                     </div>
                 </aside>
+                
             </div>
         </main>
 
-        <footer class="footer">
+        <!-- Footer Section -->
+        <footer>
             <a href="#top">GO TO TOP</a>
             <hr>
-            Author: Jonathan Gauvin-Audet <br>
-            &copy; 2024 My Portfolio. All Rights Reserved.
+            <p>Author: Jonathan Gauvin-Audet</p>
+            <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
         </footer>
     </div>
 </body>

@@ -1,5 +1,14 @@
-/* ***** General Styles ***** */
-/* include : over style and body, header & nav, audio, main, section and footer */
+
+/* ***** this css is build into 7 sections ***** */
+
+/* 1: over style and body, header & nav, audio, main & main-wrapper, grid and footer */
+/* 2 : Style and class given to HOME page */
+/* 3 : Style and class given to ABOUT ME page */
+/* 4 : Style and class given to PROJECTS page */
+/* 5 : Style and class given to BLOG page */
+/* 6 : Style and class given to CONTACT page */
+/* 7 : Style and class given to media & different screen */
+
 
 * {
     margin: 0;
@@ -7,35 +16,31 @@
     box-sizing: border-box;
 }
 
-.main-content-wrapper {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-body, html { /* I put (html) for full page layout and consistent background with the image. */
-    font-size: 16px;
+body, html {
     font-family: 'Roboto', Arial, sans-serif;
-    line-height: 1.7;
+    font-size: 16px;
+    line-height: 1.6;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
     color: #333;
     background-image: url('images/background.png');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
 }
 
+/* ***** Header ***** */
 header {
     background: linear-gradient(135deg, #333, #555);
     color: #fff;
-    padding: 10px 20px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; 
 }
 
 header h1 {
@@ -47,7 +52,6 @@ nav {
     display: flex;
     justify-content: center;
     gap: 20px;
-    font-size: 1.3rem;
 }
 
 nav a {
@@ -57,82 +61,54 @@ nav a {
 }
 
 nav a:hover {
-    text-decoration: underline;
     color: #b11226;
+    text-decoration: underline;
     transition: color 0.3s ease;
 }
 
+/* Background Music Section */
 #background-music {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: #fff;
     margin-top: 5px;
-    display: inline-flex; /* text and audio are on same line */
-    align-items: center; 
-    gap: 0px; /* Space between the text and audio player */
 }
 
-#background-music p {
-    font-weight: bold;
-    text-align: center;
-    font-size: 14px;
-    color: #ffffff;
-    margin: 0; 
-}
-
-#background-music audio { /* Remove default margins/paddings and i chaned the default"s size player*/
-    margin: 0; 
-    padding: 0;
-    max-width: 250px;
+#background-music audio {
+    width: 250px;
     height: 30px;
 }
 
-main {
+.main-content-wrapper {
     flex: 1;
-    max-width: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-container {
+    display: grid;
+    gap: 20px;
+    width: 100%;
+    max-width: 85%;
     margin: 0 auto;
-    padding: 0px;
-    box-sizing: border-box;
-}
-
-h1, h2, h3, h4 {
-    font-family: 'Roboto', Arial, sans-serif;
-}
-
-h1 {
-    font-size: 2.5rem;
-    margin: 0 0 20px;
-}
-
-h2 {
-    font-size: 2rem;
-    margin: 0 0 15px;
-}
-
-h3 {
-    font-size: 1.5rem;
-    margin: 0 0 10px;
-}
-
-h4 {
-    font-size: 1rem;
-    margin: 0 0 5px;
-}
-
-p {
-    margin: 0 0 20px;
-    text-align: justify;
-    padding: 0 10px;
-}
-
-section {
+    padding: 20px;
+    grid-template-columns: 0.8fr 2fr 0.8fr; 
     margin-top: 30px;
-    margin-bottom: 20px;
-    background-color: #f8f8f8;
-    padding: 25px; 
-    border-radius: 10px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); 
-    max-width: 960px;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
+}
+
+.grid-container > * { /* targets all child elements*/
+    background-color: rgba(240, 240, 240, 0.95);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Apply hover effect to all images */
+.grid-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 footer {
@@ -140,8 +116,6 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px;
-    width: 100%;
-    box-sizing: border-box;
     margin-top: auto;
 }
 
@@ -152,43 +126,22 @@ footer a {
 }
 
 footer a:hover {
-    text-decoration: underline;
     color: #b11226;
+    text-decoration: underline;
     transition: color 0.3s ease;
 }
 
 
-/* The next segment is the specific layout for each page. */
-
 
 /* ***** HOME ***** */
-.home-page-main .grid-container {
-    display: grid;
-    grid-template-columns: 450px 750px 400px; /* Ratio of column width in px and not fr */
-    gap: 20px;
-    padding: 50px;
-    width: 100%;
-    max-width: 1800px; /* in (px) instead of (%), not really scalable and depend on user's screen */
-    margin: 0 auto;
-}
-
-.grid-container > * {
-    background-color: rgba(240, 240, 240, 0.95);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    align-self: flex-start; /* I want their respective height to match their content */
-}
-
 /* Left Section */
-.left-section h3, .left-section h4 {
-    margin-bottom: 10px;
+.left-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0px;
 }
 
 .left-section ul {
     list-style-type: none;
-    padding: 0;
-    margin-bottom: 20px;
 }
 
 .left-section li {
@@ -202,60 +155,48 @@ footer a:hover {
 
 .left-section a:hover {
     text-decoration: underline;
+    font-weight: bold;
+    color: #b11226;
 }
 
 /* Center Section */
 .center-section h2 {
     font-size: 2rem;
-    margin-bottom: 15px;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .center-section h3 {
-    font-size: 1rem;
-    margin-top: 20px;
+    font-size: 1.2rem;
     text-align: center;
-}
-
-.center-section h4 {
-    font-size: 1rem;
-    margin-top: 20px;
-    text-align: left;
+    margin-bottom: 15px;
 }
 
 .center-section p {
-    margin-bottom: 15px;
     text-align: justify;
+    margin-bottom: 15px;
 }
 
 /* Right Section */
 .right-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center-aligns all content */
     text-align: center;
 }
 
 .right-section h3 {
-    margin-bottom: 5px;
-}
-
-.right-section p {
-    margin-top: 5px;
-    margin-bottom: 15px;
-    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
 .social-links {
     display: flex;
-    flex-direction: row; 
-    justify-content: center; 
-    gap: 15px; 
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+    margin-bottom: px;
 }
 
 .social-links img {
     width: 40px;
-    height: auto;
     transition: transform 0.3s ease;
 }
 
@@ -264,55 +205,31 @@ footer a:hover {
 }
 
 .cat-image-container {
-    margin-top: 10px; 
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 .cat-photo {
-    width: 95%;
-    max-width: 375px; 
-    border-radius: 10px; 
+    width: 100%; 
+    max-width: 275px;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Responsive Adjustments */
-@media screen and (max-width: 768px) {
-    .home-page-main .grid-container {
-        grid-template-columns: 1fr; /* Single-column layout on phone */
-    }
-
-    header .header-content h1 {
-        font-size: 2.5rem;
-    }
-
-    header nav a {
-        margin: 0 10px;
-    }
-
-    /* Make center-section (text) appear first */
-    .center-section {
-        order: 1;
-    }
-    
-    .left-section {
-        order: 2;
-    }
-
-    .right-section {
-        order: 3;
-    }
-    
+.cat-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 
 
-
-
-
-/* ABOUT ME */
+/* ***** ABOUT ME ***** */
 .about-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-columns: 2fr 1fr 1fr; /* Main text area on the left, two columns on the right */
+    grid-template-rows: auto auto; /* Allows two rows: one for top images, one for bottom image */
     gap: 20px;
     max-width: 1200px;
     margin: 20px auto;
@@ -320,16 +237,20 @@ footer a:hover {
 }
 
 .about-text {
-    grid-column: 1 / 2;
-    grid-row: 1 / 3;
+    grid-column: 1 / 2; /* Occupies the entire left column */
+    grid-row: 1 / 3; /* Spans two rows */
     background-color: rgba(240, 240, 240, 0.95);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-height: 850px; /* Manually fixed to match the height of the stacked picture */
+    max-height: 850px; /* Matches the height of the stacked pictures */
     text-align: justify;
+    overflow-y: auto; /* Adds scroll if content overflows */
+    font-size: 1rem; /* Increase font size */
+    line-height: 1.8; /* Adjust line-height for readability */
 }
 
+/* About Photo Sections */
 .about-photo {
     background-color: rgba(240, 240, 240, 0.95);
     padding: 10px;
@@ -344,92 +265,162 @@ footer a:hover {
     width: 100%;
     height: auto;
     border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.about-photo img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+/* Specific Positions for Each Image */
 .about-photo1 {
-    grid-column: 2 / 3;
+    grid-column: 2 / 3; /* Top right image, left side */
     grid-row: 1 / 2;
 }
 
 .about-photo2 {
-    grid-column: 3 / 4;
+    grid-column: 3 / 4; /* Top right image, right side */
     grid-row: 1 / 2;
 }
 
 .about-photo3 {
-    grid-column: 2 / 4;
+    grid-column: 2 / 4; /* Bottom image, spans two columns */
     grid-row: 2 / 3;
 }
 
-/* Responsive layout for small screens */
-@media screen and (max-width: 768px) {
-    .about-grid {
-        grid-template-columns: 1fr; /* Switch to a single-column layout */
-        grid-template-rows: auto auto auto auto;
-    }
 
-    .about-text {
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
-        max-height: none; /* Remove height constraint on small screens */
-    }
-
-    .about-photo1, .about-photo2, .about-photo3 {
-        grid-column: 1 / 2; /* All photos in a single column */
-        grid-row: auto; /* Let them flow naturally in order */
-    }
+    
+/* ***** PROJECTS SECTION ***** */
+#projects {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Space between project items */
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ***** PROJECTS ***** */
 .project-item {
     padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    background-color: #fff;
     text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Ensures the container takes the full width within #projects */
+    max-width: 900px; /* Optional: limit max width for a more centered look */
+    margin: 0 auto; /* Center-align within #projects */
 }
 
 .project-item h3 {
     margin-top: 0;
-    padding-left: 10px;   /* Add padding to align with headings */
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+}
+
+.project-item p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+}
+
+/* Hover effect for project items */
+.project-item:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for project links */
+.project-item a {
+    color: #b11226;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-item a:hover {
+    text-decoration: underline;
+    color: #ff6961;
+}
+
+/* Checklist style */
+.project-checklist {
+    list-style-type: none; /* Remove default bullet points */
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+.project-checklist li {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    padding-left: 30px;
+    position: relative;
+    color: #333;
+}
+
+/* Checkbox symbol */
+.project-checklist li::before {
+    content: "\2713"; /* Checkmark symbol for done items */
+    font-size: 1rem;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    text-align: center;
+    border: 2px solid #b11226; /* Red border for consistency */
+    border-radius: 3px;
+    color: white;
+    background-color: #b11226; /* Background for done items */
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+/* Style for not-done items */
+.project-checklist .not-done::before {
+    content: "\00D7"; /* X symbol for not-done items */
+    background-color: #ccc; /* Gray background for not-done items */
+    border-color: #ccc;
+}
+
+/* Project Content Layout: Stacked (Text on top, Image below) */
+.project-content {
+    display: flex;
+    flex-direction: column; /* Stack text and image on top of each other */
+    gap: 20px;
+}
+
+.project-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Project Image Styling */
+.project-image-container {
+    text-align: center; /* Center the image */
+    width: 100%; /* Make the container full-width within the project item */
+}
+
+.project-image {
+    width: 100%;
+    max-width: 800px; /* Adjust based on preference */
+    height: auto;
+    display: inline-block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-image:hover {
+    transform: scale(1.05); /* Zoom-in effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -449,72 +440,23 @@ footer a:hover {
 
 
 
-
-
-/* ***** BLOG ***** */
-.blog-item {
+/* ***** CONTACT SECTION ***** */
+#contact {
+    max-width: 800px;
+    margin: 20px auto;
     padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    border-radius: 10px;
-    background-color: #fff;
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: rgba(255, 255, 255, 0.95); /* Add a background color */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.blog-item h3 {
-    margin-top: 0;
-    padding-left: 10px;   /* Add padding to align with headings */
-}
-
-/* Bayesian Image  */
-.bayesian-img {
-    display: block;
-    margin: 20px auto; 
-    max-width: 100%; /* Ensure the image doesn't exceed 100% of the container */
-    width: 900px;
-    height: auto; 
-}
-
-/* Wine Image  */
-.wine-img {
-    display: block;
-    margin: 20px auto; 
-    max-width: 100%; 
-    width: 500px;
-    height: auto; 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ***** CONTACT ***** */
 .contact-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    max-width: 600px;
-    margin: 20px auto;
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 8px;
@@ -549,3 +491,95 @@ footer a:hover {
     background-color: #90081a;
 }
 
+.contact-details ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.contact-details li {
+    margin-bottom: 5px;
+}
+
+.contact-details a {
+    color: #b11226;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+.map-container {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+/* ***** Media Queries ***** */
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    }
+
+    .center-section {
+        order: 1;
+    }
+
+    .left-section {
+        order: 2;
+    }
+
+    .right-section {
+        order: 3;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr; /* Switch to a single-column layout */
+        grid-template-rows: auto auto auto auto; /* Separate each item vertically */
+    }
+
+    .about-text {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        max-height: none; /* Remove height constraint on small screens */
+    }
+
+    .about-photo1, .about-photo2, .about-photo3 {
+        grid-column: 1 / 2; /* All photos stack in a single column */
+        grid-row: auto; /* Let them flow naturally in order */
+    }
+
+    .project-content {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+
+    .project-image-container {
+        max-width: 100%; /* Full width on small screens */
+        margin-top: 10px; /* Add spacing between text and image */
+    }    
+}
+
+@media (min-width: 992px) {
+    .grid-container {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+}

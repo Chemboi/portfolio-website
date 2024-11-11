@@ -1,66 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Personal portfolio website showcasing projects, blogs, and contact information.">
-    <title>My Personal Portfolio</title>
+    <title>Projects - My Personal Portfolio</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
-<body>
+<body class="projects-page">
     
     <header>
-        <div class="header-left">
-            <h1>Projects</h1>
-            <nav>
-                <a href="home.html">Home</a>
-                <a href="about_me.html">About Me</a>
-                <a href="blog.html">Blog</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-            <!-- Background Music Section -->
-            <div id="background-music">
-                <p>Enjoy some jazz background music while browsing</p>
-                <audio controls loop>
-                    <source src="audio/Night in Venice.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
+        <h1>Projects</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about_me.html">About Me</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <!-- Background Music Section -->
+        <div id="background-music">
+            <p>Enjoy some jazz background music while browsing</p>
+            <audio controls loop>
+                <source src="audio/Night in Venice.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
         </div>
-        
     </header>
 
-
-
     <main>
-
         <!-- Projects Section: Highlights ongoing projects -->
         <section id="projects">
-            <article>
+            <article class="project-item">
                 <h3>Project 1: Personal Portfolio Website</h3>
                 <p>
-                    This project, as you can see here, is my first personal portfolio website showcasing a description of my work with pictures, my completed projects, future projects that I would like to undertake, a blog where I share things that I think are interesting, and my contact details.
-                </p>
+                    This project, as you can see here, is my first personal portfolio website showcasing a description of my work with pictures, my completed projects, future projects that I would like to undertake, a blog where I share things that I think are interesting, and my contact details. I shall share with you my advances and things that I updated on this project here. This project is still in a beta or first stage if I may, but there's already this that I would like to work on and improve.
+                </p><br>
+                <strong>Update: November 10, 2024</strong>
+                <ul class="project-checklist">
+                    <li class="not-done">Improve the home page’s grid layout to ensure a balanced design that takes up the available space properly.</li>
+                    <li class="not-done">Enhance the grid layout on the About Me page by improving text appearance and potentially adding animations for a more visually engaging experience.</li>
+                    <li class="not-done">Refactor CSS to create a more scalable base template instead of specific classes for each page.</li>
+                </ul>
             </article>
 
-            <article>
+            <article class="project-item">
                 <h3>Project 2: Wine App</h3>
-                <p> 
-                    As a wine enthusiast, I have always wanted to create my own wine app since all the apps I found available on the Apple Store or Android Store were either not to my taste, costly, or didn't have the cellar option for keeping track of my wine, among other features. With this app, I could include all the options I want, such as tracking preferences and guiding users to wines that would fit their tastes. It would also have the option to scan wine labels to upload preferences, history, and other user reviews of the wine, as well as information about the winery and the regions where the grapes are cultivated, etc.  <a href="https://github.com/Chemboi/wine-app" target="_blank">View Project</a>
-                </p>
+                <div class="project-content">
+                    <div class="project-description">
+                        <p> 
+                            As a wine enthusiast, I’ve always wanted to create my own wine app because most of the apps I found available on the Apple Store or Android Store were either not to my taste, costly, or lacked a cellar option to keep track of my wine, among other features. With this app, I could include all the options I want, such as tracking preferences and guiding users to wines that fit their tastes. It would also have the option to scan wine labels to upload preferences, history, and other user reviews, as well as information about the winery and the regions where the grapes are cultivated.
+                            <br><br>
+                            The project is still in the initial stages, as only the homepage is complete since I’m still learning the world of web development. Once I finish it, I plan to test it on my own before making it public or sharing it with friends. <a href="https://github.com/Chemboi/wine-app" target="_blank">View Project on Github</a>
+                        </p>
+                    </div>
+                    <div class="project-image-container">
+                        <img src="images/wine app.png" alt="Wine App Home Page Screenshot" class="project-image">
+                    </div>
+                </div>
             </article>
-
         </section>
-
-    </main> 
-
-
-
+    </main>
 
     <footer class="footer">
         <a href="#top">GO TO TOP</a>
@@ -68,7 +70,5 @@
         Author: Jonathan Gauvin-Audet <br>
         &copy; 2024 My Portfolio. All Rights Reserved. <br>
     </footer>
-
 </body>
-
 </html>
