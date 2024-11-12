@@ -6,14 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Personal portfolio website showcasing projects, blogs, and contact information.">
     <title>My Personal Portfolio</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="main-content-wrapper">
-        <!-- Header Section -->
+
         <header>
+
             <div class="header-content">
                 <h1>Welcome to My Portfolio!</h1>
                 <nav>
@@ -22,18 +24,29 @@
                     <a href="blog.html">Blog</a>
                     <a href="contact.html">Contact</a>
                 </nav>
-                <!-- Background Music Section -->
-                <div id="background-music">
+                
+                <!-- Custom audio JS -->
+                <div class="audio-container">
                     <p>Enjoy some jazz background music while browsing</p>
-                    <audio controls loop>
-                        <source src="audio/Night in Venice.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
+                    <div class="custom-audio-player">
+                        <audio id="audio-player" src="audio/Night in Venice.mp3"></audio>
+                        <div class="controls">
+                            <button id="play-pause-btn">Play</button>
+                            <button id="stop-btn">Stop</button>
+                            <input type="range" id="volume-control" min="0" max="1" step="0.1" value="0.5">
+                            <span>Volume</span>
+                        </div>
+                        <div class="progress-container">
+                            <input type="range" id="progress-bar" value="0" max="100">
+                            <span id="time-display">0:00</span>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </header>
+        
 
-        <!-- Main Content Grid -->
         <main>
             <div class="grid-container">
                 
@@ -76,7 +89,7 @@
                 <!-- Right Section: Social Media Links -->
                 <aside class="grid-item right-section">
                     <h3>Social Media</h3>
-                    <p>Let's connect on LinkedIn and X!</p>
+                    <p>Let's connect on LinkedIn and X!</p>         
                     <div class="social-links">
                         <a href="https://www.linkedin.com/in/jonathan-gauvin-audet-5a8067139" target="_blank" rel="noopener">
                             <img src="images/LI-In-Bug.png" alt="LinkedIn">
@@ -93,20 +106,24 @@
                     </div>
                     <div class="cat-image-container">
                         <img src="images/norbert.png" alt="My Cat" class="cat-photo">
-                    </div>
+                    </div>                
                 </aside>
-                
+
             </div>
+
         </main>
 
-        <!-- Footer Section -->
-        <footer>
+
+         <!-- No social links in this footer since they are on the page in left section -->
+        <footer class="footer">
             <a href="#top">GO TO TOP</a>
             <hr>
-            <p>Author: Jonathan Gauvin-Audet</p>
-            <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
+            Author: Jonathan Gauvin-Audet <br>
+            &copy; 2024 My Portfolio. All Rights Reserved.
         </footer>
+
     </div>
+    <script src="audioPlayer.js"></script>
 </body>
 
 </html>

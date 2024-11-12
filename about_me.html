@@ -4,14 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Jonathan Gauvin-Audet’s background in chemistry and research, along with my journey into web development." />
     <title>About Me</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="style.css"> 
 </head>
 
-<!-- need to link the body of ABOUT ME to its own css's class since i'm lacking time to find whats its causing me layout problems with the overall style -->
 
 <body class="about-page"> 
     <header>
+
         <h1>About me</h1>
         <nav>
             <a href="home.html">Home</a>
@@ -19,17 +21,19 @@
             <a href="blog.html">Blog</a>
             <a href="contact.html">Contact</a>
         </nav>
-        <!-- Background Music Section -->
+
         <div id="background-music">
             <p>Enjoy some jazz background music while browsing</p>
             <audio controls loop>
                 <source src="audio/Night in Venice.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
+
         </div>
     </header>
 
     <main class="about-grid">
+
         <section class="about-text">
             <p>
                 My name is <strong>Jonathan Gauvin-Audet</strong>. I'm 30 years old and I'm a full-time R&D researcher scientist with a Bachelor's degree in Chemistry and a Master's degree in Materials Chemistry, specializing in heterogeneous catalysis and silica nanotechnology. 
@@ -41,7 +45,6 @@
                 <br><br>
                 Beyond my professional endeavors, I am a certified snowboard instructor, a dedicated traveler, and an avid wine enthusiast. These activities fuel my passion for continuous learning and personal growth.
             </p>
-
         </section>
 
         <div class="about-photo about-photo1">
@@ -49,20 +52,32 @@
         </div>
 
         <div class="about-photo about-photo2">
-            <img src="images/lanerthe.png" alt="Chateau neuf du pape Chateau Lanerthe">
+            <img src="images/lanerthe.png" alt="Visite au Chateau neuf du pape Chateau Lanerthe">
         </div>
-
+        
         <div class="about-photo about-photo3">
             <img src="images/snow.jpg" alt="Snowboarding at Whistler">
         </div>
+
     </main>
     
 
-    <footer>
+    <footer class="footer">
+
         <a href="#top">GO TO TOP</a>
         <hr>
         Author: Jonathan Gauvin-Audet <br>
         &copy; 2024 My Portfolio. All Rights Reserved.
+    
+        <div class="footer-social-links">
+            <a href="https://www.linkedin.com/in/jonathan-gauvin-audet-5a8067139" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <img src="images/LI-In-Bug.png" alt="LinkedIn" class="social-icon">
+            </a>
+            <a href="https://x.com/JGauvinAudet" target="_blank" rel="noopener" aria-label="X">
+                <img src="images/logo-black.png" alt="X" class="social-icon">
+            </a>
+        </div>
+
     </footer>
 </body>
 

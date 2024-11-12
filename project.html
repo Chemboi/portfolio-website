@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal portfolio website showcasing projects, blogs, and contact information.">
+    <meta name="description" content="Explore my portfolio projects in web development. See detailed project descriptions and technical challenges solved." />
     <title>Projects - My Personal Portfolio</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -13,6 +13,7 @@
 <body class="projects-page">
     
     <header>
+        
         <h1>Projects</h1>
         <nav>
             <a href="home.html">Home</a>
@@ -20,7 +21,7 @@
             <a href="blog.html">Blog</a>
             <a href="contact.html">Contact</a>
         </nav>
-        <!-- Background Music Section -->
+
         <div id="background-music">
             <p>Enjoy some jazz background music while browsing</p>
             <audio controls loop>
@@ -28,11 +29,13 @@
                 Your browser does not support the audio element.
             </audio>
         </div>
+        
     </header>
 
     <main>
         <!-- Projects Section: Highlights ongoing projects -->
         <section id="projects">
+
             <article class="project-item">
                 <h3>Project 1: Personal Portfolio Website</h3>
                 <p>
@@ -43,6 +46,8 @@
                     <li class="not-done">Improve the home page’s grid layout to ensure a balanced design that takes up the available space properly.</li>
                     <li class="not-done">Enhance the grid layout on the About Me page by improving text appearance and potentially adding animations for a more visually engaging experience.</li>
                     <li class="not-done">Refactor CSS to create a more scalable base template instead of specific classes for each page.</li>
+                    <li class="done">Replace the default audio player with a custom one built using JS.</li>
+                    <li class="not-done">Modify the custom audio player to enhance its design.</li>
                 </ul>
             </article>
 
@@ -62,13 +67,25 @@
                 </div>
             </article>
         </section>
+
     </main>
 
     <footer class="footer">
         <a href="#top">GO TO TOP</a>
         <hr>
         Author: Jonathan Gauvin-Audet <br>
-        &copy; 2024 My Portfolio. All Rights Reserved. <br>
+        &copy; 2024 My Portfolio. All Rights Reserved.
+        
+        <div class="footer-social-links">
+            <a href="https://www.linkedin.com/in/jonathan-gauvin-audet-5a8067139" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <img src="images/LI-In-Bug.png" alt="LinkedIn" class="social-icon">
+            </a>
+            <a href="https://x.com/JGauvinAudet" target="_blank" rel="noopener" aria-label="X">
+                <img src="images/logo-black.png" alt="X" class="social-icon">
+            </a>
+       
+        </div>
     </footer>
+
 </body>
 </html>
